@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="space.css">
+</head>
+<body onload="onPageLoad()">
+    <div class="topnav">
+        <a ></a>
+        <a ></a>
+        <a ></a>
+        <a >Log Out</a>
+      </div>
+    <header>
+        <div>
+            <h1>Space travel registration</h1>
+            <h4><i>This site is for all those who want to register for their chance to travel to outer space. <br>
+            You have to sign up to this site and then enter your details. Your details shall be kept confidential. <br>
+            </i></h4>            
+        </div>
+        <div id="stage">
+            <img src="galactic_image.jpg" height = "15%" width = "25%" alt="space ship image" id="galactic_image">
+            
+        </div>
+        <div class="formContainer">
+            
+            <!--Here we shall put the registration form which shall get rendered when the user clicks on the Sign Up button.
+                It should include First Name, Last Name, email and password. Also checkbox with I agree Terms and conditions
+                These fields should have validations. If there is any error, then it should be displayed somewhere
+                Once the form is submitted successfully then, the user should be taken to their dashboard and all data should be 
+                stored in the localStorage-->
+                
+                <form class="form01" target="_self" id="form_01">
+                    <h3 style="color: rgb(50, 95, 243); margin-top: 1px; margin-bottom: 2px;">Please enter details for registration</h3>                    
+                    <table>
+                        <tr><!--First row-->
+                            <td style="text-align: right;">
+                                First Name:
+                            </td>
+                            <td>
+                                <input type="text" id="fname" placeholder="First Name">                                
+                            </td>
+                            <td>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            </td>
+                            <td style="text-align: right;">
+                                Last Name:
+                            </td>
+                            <td>
+                                <input type="text" id="lname" placeholder="Last Name">
+                            </td>
+                        </tr>
+                        <tr><!--Error message row-->
+                            <td></td>
+                            <td style="color: red;font-size:small;text-align: left;" id="errFirstName"></td>
+                            <td></td>
+                            <td></td>
+                            <td style="color: red;font-size:small;text-align: left;" id="errLastName"></td>
+                        </tr>
+                        <tr><!--Second row-->
+                            <td style="text-align: right;">Email:</td><td><input type="text" id="email" placeholder="Email"></td>
+                        </tr>
+                        <tr><!--Error message row-->
+                            <td></td>
+                            <td style="color: red;font-size:small;text-align: left;" id="errEmail"></td>
+                        </tr>
+                        <tr><!--Third row-->
+                            <td style="text-align: right;">
+                                Password:
+                            </td>
+                            <td>
+                                <input type="password" id="password1" placeholder="Password">
+                            </td>
+                            <td>
+                                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                            </td>
+                            <td style="text-align: right;">
+                                Password:
+                            </td>
+                            <td>
+                                <input type="password" id="password2" placeholder="Conform Password">
+                            </td>
+                        </tr>
+                        <tr><!--Error message row-->
+                            <td></td>
+                            <td style="color: red;font-size:small;text-align: left;" id="errPasswordOne"></td>
+                            <td></td>
+                            <td></td>
+                            <td style="color: red;font-size:small;text-align: left;" id="errPasswordTwo"></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <button type="button" class="register_btn" id="register">Save</button>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                    <button type="button" class="cancel_btn" id="cancelReg">Cancel</button>               
+                </form>
+        </div>
+        <div class="login">
+            <form id="form_02">
+                <table>
+                    <tr>
+                        <td style="text-align: right;">User Id:</td>
+                        <td>
+                            <input type="text" id="uderId" placeholder="User Id">
+                        </td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                        <td style="text-align: right;">Password:</td>
+                        <td>
+                            <input type="password" id="enterPassword" placeholder="Password">
+                        </td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                        <td><button type="button" id="logInMain">Log In</button></td>
+                        <td>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</td>
+                        <td><button type="button" id="CancelMain">Cancel</button></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td style="color: red;font-size:small;text-align: left;" id="errUserId">User Id not found</td>
+                        <td></td>
+                        <td></td>
+                        <td style="color: red;font-size:small;text-align: left;" id="errPasswordEnter">Password is incorrect</td>
+                    </tr>                    
+                </table>
+            </form>
+            
+            
+        </div>
+        <div class="signUpLoginButtons">
+            <button type="button" class="buttons" id="signUp">Sign Up</button>
+            <button type="button" class="buttons" id="logIn">Log In</button>
+        </div>
+        
+            <!--<h4 class="errorMessage"></h4>-->
+    </header>
+
+
+    <script src="space.js"></script>
+</body>
+</html>
