@@ -1,0 +1,25 @@
+body {
+    font-family: "Verdana";
+}
+
+section {
+    text-align: center;
+}
+
+.gameContainer {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    width: 306px;
+    margin: 50px auto;
+}
+
+.Cell {
+    font-family: "Verdana";
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    font-size: 60px;
+}
+.RedCross{
+    color:red;
+}
